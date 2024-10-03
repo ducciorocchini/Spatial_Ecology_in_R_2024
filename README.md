@@ -5,7 +5,9 @@ This repo is containing the whole code for the Spatial Ecology in R course at th
 The main scripts for this course are the following:
 + A first intro script
 + Population ecology script
-+ Community ecology script 
++ Community ecology script
+
+The whole code can be found inside the Code folder.
 
 ## How the exam works 📖
 For the exam students are expected to build their own project based on the following steps:
