@@ -7,7 +7,7 @@ The main scripts for this course are the following:
 + Population ecology script
 + Community ecology script
 
-The whole code can be found inside the Code folder.
+> The whole code can be found inside the Code folder.
 
 ## How the exam works 📖
 For the exam students are expected to build their own project based on the following steps:
