@@ -37,34 +37,21 @@ densitymap <- density(bei)
 plot(densitymap)
 points(bei, cex=.2)
 
-cl <- colorRampPalette(c("black", "red", "orange", "yellow"))(100)
-plot(densitymap, col=cl)
+########## DAY 2
 
-cl <- colorRampPalette(c("black", "red", "orange", "yellow"))(4)
-plot(densitymap, col=cl)
-
-clnew <- colorRampPalette(c("dark blue", "blue", "light blue"))(100)
-plot(densitymap, col=clnew)
-
-plot(bei.extra)
-
-elev <- bei.extra[[1]] # bei.extra$elev
-plot(elev)
-
-# multiframe
+# Plotting the maps one beside the other
 par(mfrow=c(1,2))
+plot(elevation2)
 plot(densitymap)
-plot(elev)
 
+# Exercise: make a multiframe with maps one on top of the other
 par(mfrow=c(2,1))
+plot(elevation2)
 plot(densitymap)
-plot(elev)
 
-par(mfrow=c(1,3))
-plot(bei)
-plot(densitymap)
-plot(elev)
-
+# one frined to clear graphs
+dev.off()
+plot(elevation2)
 
 
 
