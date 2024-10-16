@@ -38,7 +38,6 @@ plot(densitymap)
 points(bei, cex=.2)
 
 ########## DAY 2
-
 # Plotting the maps one beside the other
 par(mfrow=c(1,2))
 plot(elevation2)
@@ -54,14 +53,20 @@ dev.off()
 plot(elevation2)
 
 # Changin colors to maps
-# http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
-cl <- colorRampPalette(c("black", "blue", "red"))(3)
+cl <- colorRampPalette(c("red", "orange", "yellow"))(3)
 plot(densitymap, col=cl)
 
-cl <- colorRampPalette(c("black", "blue", "red"))(100)
+cl <- colorRampPalette(c("red", "orange", "yellow"))(10)
 plot(densitymap, col=cl)
+
+cl <- colorRampPalette(c("red", "orange", "yellow"))(100)
+plot(densitymap, col=cl)
+
+# search your browser for "colors in R" 
+# http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
 
 # Exercise: change the color ramp palette using different colors
+
 cln <- colorRampPalette(c("purple1", "orchid2", "palegreen3", "paleturquoise"))(100)
 plot(densitymap, col=cln)
 
