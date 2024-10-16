@@ -37,6 +37,8 @@ densitymap <- density(bei)
 plot(densitymap)
 points(bei, cex=.2)
 
+# http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
+
 cl <- colorRampPalette(c("black", "red", "orange", "yellow"))(100)
 plot(densitymap, col=cl)
 
