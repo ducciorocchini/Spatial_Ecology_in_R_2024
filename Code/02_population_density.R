@@ -53,6 +53,29 @@ plot(densitymap)
 dev.off()
 plot(elevation2)
 
+# Changin colors to maps
+# http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
+cl <- colorRampPalette(c("black", "blue", "red"))(3)
+plot(densitymap, col=cl)
+
+cl <- colorRampPalette(c("black", "blue", "red"))(100)
+plot(densitymap, col=cl)
+
+# Exercise: change the color ramp palette using different colors
+cln <- colorRampPalette(c("purple1", "orchid2", "palegreen3", "paleturquoise"))(100)
+plot(densitymap, col=cln)
+
+# Exrcise: build a multiframe and plot the densitymap with two different color ramp palettes one beside the other
+
+par(mfrow=c(1,2))
+
+cln <- colorRampPalette(c("purple1", "orchid2", "palegreen3", "paleturquoise"))(100)
+plot(densitymap, col=cln)
+
+clg <- colorRampPalette(c("green4", "green3", "green2", "green1", "green"))(100)
+plot(densitymap, col=clg)
+
+dev.off()
 
 
 
