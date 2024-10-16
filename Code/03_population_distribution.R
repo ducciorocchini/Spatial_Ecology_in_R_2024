@@ -1,2 +1,5 @@
-install.packages("terra")
+# install.packages("sdm")
+# install.packages("terra")
+
+library(sdm)
 library(terra)
