@@ -29,3 +29,7 @@ perc1+perc2
 
 plot(multivar)
 
+
+# Achillea millefolium
+# Bromus hordeaceus
+
