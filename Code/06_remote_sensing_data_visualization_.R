@@ -34,10 +34,39 @@ plot(b3, col=cl) # green
 plot(b4, col=cl) # red
 plot(b8, col=cl) # NIR
 
+# stacking the images
+sentstack <- c(b2, b3, b4, b8)
+plot(sentstack, col=cl)
 
+dev.off()
 
+# plotting single layers
+plot(sentstack[[1]], col=cl)
+plot(sentstack[[4]], col=cl)
 
+# changing color ramp palettes
+clb <- colorRampPalette(c("dark blue", "blue", "light blue")) (100)
 
+par(mfrow=c(2,2))
+plot(b2, col=clb)
+
+clg <- colorRampPalette(c("dark green", "green", "light green")) (100)
+plot(b3, col=clg)
+
+clr <- colorRampPalette(c("dark red", "red", "pink")) (100)
+plot(b4, col=clr)
+
+cln <- colorRampPalette(c("brown", "orange", "yellow")) (100)
+plot(b8, col=cln)
+
+# RGB plot
+# sentstack[[1]] = blue
+# sentstack[[2]] = green
+# sentstack[[3]] = red
+# sentstack[[4]] = NIR
+
+im.plotRGB(sentstack, r=3, g=2, b=1)
+im.plotRGB(sentstack, r=4, g=3, b=2)
 
 
 
