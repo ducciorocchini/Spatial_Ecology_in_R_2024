@@ -10,7 +10,7 @@ library(imageRy)
 im.list()
 
 # Sentinel-2 bands
-https://gisgeography.com/sentinel-2-bands-combinations/
+# https://gisgeography.com/sentinel-2-bands-combinations/
 
 # importing the data
 b2 <- im.import("sentinel.dolomites.b2.tif")
@@ -69,10 +69,12 @@ plot(b8, col=cln)
 # sentstack[[2]] green
 # sentstack[[3]] red
 # sentstack[[4]] NIR
-
+  
 dev.off()
 im.plotRGB(sentstack, r=3, g=2, b=1) # natural color image
 im.plotRGB(sentstack, r=4, g=3, b=2) # false color image
+im.plotRGB(sentstack, r=3, g=4, b=2) # false color image
+im.plotRGB(sentstack, r=3, g=2, b=4) # false color image
 
 
 
