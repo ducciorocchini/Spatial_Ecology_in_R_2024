@@ -23,31 +23,24 @@ plot(dif, col=cldif)
 
 ### New example: temperature in Greenland
 
-g2000 <- im.import("greenland.2000.tif")
-clg <- colorRampPalette(c("black", "blue", "white", "red")) (100)
-plot(g2000, col=clg)
+# how to import severla files altogether
+greenland <- im.import("greenland")
 
-g2005 <- im.import("greenland.2005.tif")
-g2010 <- im.import("greenland.2010.tif")
-g2015 <- im.import("greenland.2015.tif")
-
-plot(g2015, col=clg)
+plot(green)
 
 par(mfrow=c(1,2))
-plot(g2000, col=clg)
-plot(g2015, col=clg)
+plot(greenland[[1]], col=viridis(100))
+plot(greenland[[4]], cpò=viridis(100))
 
-# stacking the data
-stackg <- c(g2000, g2005, g2010, g2015)
-plot(stackg, col=clg)
+plot(greenland[[1]], col=rocket(100))
+plot(greenland[[4]], cpò=rocket(100))
 
 # Exercise: make the differencxe between the first and the final elemnts of the stack
-difg <- stackg[[1]] - stackg[[4]]
-# difg <- g2000 - g2015
-plot(difg, col=cldif)
+difg <- greenland[[4]] - greenland[[1]]
+plot(difg)
 
 # Exercise: make a RGB plot using different years
-im.plotRGB(stackg, r=1, g=2, b=3)
+im.plotRGB(green, r=1, g=2, b=3)
 
 
 
