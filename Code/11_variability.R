@@ -20,4 +20,10 @@ im.plotRGB(sent, r=2, g=3, b=1)
 nir <- sent[[1]]
 sd3 <- focal(nir, matrix(1/9, 3, 3), fun=sd)
 
+# Exercise: calculate standard deviation over 7x7 pixels (moving window)
+sd7 <- focal(nir, matrix(1/49, 7, 7), fun=sd)
+plot(sd7)
 
+par(mfrow=c(1,2))
+plot(sd3)
+plot(sd7)
