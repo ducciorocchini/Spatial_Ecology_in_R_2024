@@ -1,3 +1,5 @@
+``` r
+
 # Load necessary libraries
 library(ggplot2)
 
@@ -19,4 +21,4 @@ p <- ggplot(biomass_data, aes(x = Year, y = Biomass)) +
 
 # Save the plot as a PNG file
 ggsave("biomass_trends.png", plot = p, width = 8, height = 6)
-
+```
