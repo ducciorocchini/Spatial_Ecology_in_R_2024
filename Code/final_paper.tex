@@ -1,0 +1,88 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{lineno}
+
+\linenumbers
+
+\title{This is my first LaTeX document!}
+
+\author{Duccio Rocchini$^{1,*}$, second author$^2$, third author$^3$}
+\begin{document}
+\maketitle
+
+\noindent
+$^1$ Alma Mater Studiorum University of Bologna, Department of Biological, Geological and Environmental Sciences, via Irnerio 42, 40126, Bologna, Italy\\
+$^2$ Second Affiliation \\
+$^3$ Third Affiliation \\
+$^*$ corresponding author: duccio.rocchini@unibo.it
+
+\begin{abstract}
+Here you can put your abstract directly. Here you can put your abstract directly. Here you can put your abstract directly. Here you can put your abstract directly. Here you can put your abstract directly. Here you can put your abstract directly. Here you can put your abstract directly. Here you can put your abstract directly. Here you can put your abstract directly. Here you can put your abstract directly. Here you can put your abstract directly. Here you can put your abstract directly. Here you can put your abstract directly. Here you can put your abstract directly. Here you can put your abstract directly. Here you can put your abstract directly. Here you can put your abstract directly. Here you can put your abstract directly. 
+\end{abstract}
+
+\bigskip
+% \textbf{Keywords}: biology, geology, environmental sciences
+\textit{Keywords}: biology, geology, environmental sciences
+
+\newpage
+\section{Introduction}
+
+\textcolor{red}{I will start the introduction with my common blablabla on previous literature. This is a boring part of the paper but reviewers always ask for! }
+
+If you put one line the text will go on a new parparagraph...
+
+Now we can put a reference. To do that we should make use of the natbib package, then you can begin the bibliography and end it \citep{borcard}. With the hyperref package you can make links.
+
+fast to write a papaer. In this moment I do not want to loos etime so I will put my citation like \citep{phelps}. 
+
+\citet{phelps} stated that blablabla...
+
+\section{Methods}
+Here there might be a lot of formulas to be used!
+\begin{equation}
+    H = - \sum
+\label{eq:h}
+\end{equation}
+
+\begin{equation}
+    H = - \sum p \times \log{p}
+\label{eq:shannon}
+\end{equation}
+quite simple right?
+
+And here is the code used!:
+\lstinputlisting[language=R]{list2.r}
+
+\section{Results}
+Into this section we will describe our fab results using figures! As we saw from Equation \ref{eq:shannon}, but also from that related to H, namely Equation  \ref{eq:h}.
+
+Let's make use of a proper figure (Figure \ref{fig:sat}).
+
+\begin{thebibliography}{999}
+\bibitem[Borcard and Legendre(2002)]{borcard}
+Borcard, D., Legendre, P. (2002). All-scale spatial analysis of ecological data by means of principal coordinates of neighbour matrices. Ecological Modelling, 153: 51-68.
+% 
+\bibitem[Phelps et al.(2020)]{phelps}
+Phelps, L.N., Chevalier, M., Shanahan, T.M., Aleman, J.C., Courtney‐Mustaphi, C., Kiahtipes, C.A., Broennimann, O., Marchant, R., Shekeine, J., Quick, L.J., Davis, B.A.S., Guisan, A. and Manning, K. (2020), Asymmetric response of forest and grassy biomes to climate variability across the African Humid Period: influenced by anthropogenic disturbance?. Ecography. doi:10.1111/ecog.04990
+% 
+% \bibitem etc.
+\end{thebibliography}
+
+\newpage
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{satellite2.jpeg}
+    \caption{This is the caption for a fancy figure!}
+    \label{fig:sat}
+\end{figure}
+
+
+
+
+
+\end{document}
