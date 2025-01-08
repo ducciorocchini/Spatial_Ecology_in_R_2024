@@ -18,6 +18,7 @@ biomass_data <- data.frame(Year = years, Biomass = biomass)
 p <- ggplot(biomass_data, aes(x = Year, y = Biomass)) +
   geom_line(color = "blue") +
   geom_point(color = "red") +
+
   labs(title = "Vegetation Biomass Trends Over Time",
        x = "Year",
        y = "Biomass (in arbitrary units)") +
@@ -26,3 +27,5 @@ p <- ggplot(biomass_data, aes(x = Year, y = Biomass)) +
 # Save the plot as a PNG file
 ggsave("biomass_trends.png", plot = p, width = 8, height = 6)
 ```
+
+![biomass_trends](https://github.com/user-attachments/assets/e5600839-e936-46d3-907f-6b0b57ef7709)
