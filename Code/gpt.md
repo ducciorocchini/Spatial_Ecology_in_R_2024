@@ -1,3 +1,7 @@
+# AI generated code
+
+The following code has been automatically generated:
+
 ``` r
 
 # Load necessary libraries
